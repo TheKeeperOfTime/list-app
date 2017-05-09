@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+class Student extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>{this.props.name}</h1>
+        <img src={this.props.image} />
+        <h3>{this.props.grade}</h3>
+      </div>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Student name='Spencer' image='https://avatars0.githubusercontent.com/u/20505107?v=3&s=100' grade='4.0' />
+        <Student name='Sydney' image='https://avatars0.githubusercontent.com/u/20505120?v=3&s=100' grade='4.0' />
+        
       </div>
     );
   }
